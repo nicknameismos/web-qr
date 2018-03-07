@@ -124,7 +124,8 @@ exports.rank = function (req, res) {
       });
     } else {
       var ranks = new Qrevent({
-        rank: qrevents.length + 1
+        rank: qrevents.length + 1,
+        headers: req.headers
       });
       ranks.save(function (err) {
         if (err) {
@@ -132,7 +133,6 @@ exports.rank = function (req, res) {
             message: errorHandler.getErrorMessage(err)
           });
         } else {
-          console.log(req);
           res.jsonp(ranks);
         }
       });
