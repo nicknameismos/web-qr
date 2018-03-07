@@ -132,6 +132,7 @@ exports.rank = function (req, res) {
             message: errorHandler.getErrorMessage(err)
           });
         } else {
+          console.log(req);
           res.jsonp(ranks);
         }
       });
