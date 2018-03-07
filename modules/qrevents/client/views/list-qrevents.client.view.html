@@ -1,6 +1,6 @@
-<section>
+<section ng-init="initData()">
   <div class="page-header">
-    <h1>Qrevents</h1>
+    <h1>Qrevents</h1> {{rank()}} 
   </div>
   <div class="list-group">
     <a ng-repeat="qrevent in vm.qrevents"

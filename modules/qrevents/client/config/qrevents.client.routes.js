@@ -11,7 +11,7 @@
     $stateProvider
       .state('qrevents', {
         abstract: true,
-        url: '/qrevents',
+        url: '/',
         template: '<ui-view/>'
       })
       .state('qrevents.list', {
