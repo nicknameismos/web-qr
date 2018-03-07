@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Qrevents</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="qrevent in vm.qrevents"
+       ui-sref="qrevents.view({ qreventId: qrevent._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="qrevent.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="qrevent.user" ng-bind="qrevent.user.displayName"></span>
+        <span ng-if="!qrevent.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="qrevent.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.qrevents.$resolved && !vm.qrevents.length">
+    No Qrevents yet, why don't you <a ui-sref="qrevents.create">create one</a>?
+  </div>
+</section>
