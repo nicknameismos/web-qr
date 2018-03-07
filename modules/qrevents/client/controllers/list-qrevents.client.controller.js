@@ -9,6 +9,7 @@
 
   function QreventsListController($http, $scope) {
     var vm = this;
+    $scope.rrr = 'modules/qrevents/client/img/background/BG_web_thamtu.jpg';
     // vm.qrevents = QreventsService.query();
     $scope.initData = function () {
 
@@ -35,6 +36,10 @@
     $scope.rank = function(){
       return window.localStorage.getItem('rank');
     };
+    $scope.permission = function(){
+     alert('ss');
+    };
+   
 
   }
 }());
