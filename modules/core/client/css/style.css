@@ -10294,6 +10294,40 @@ body.md-skin {
     transform: translate(-50%, -50%)
 }
 
+@media (min-width: 200px) {
+  .count-radius {
+      border: solid 2px white;
+      border-radius: 50%;
+      min-width: 200px;
+      min-height: 200px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 75%)
+  }
+  .button-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      margin-right: -50%;
+      transform: translate(-50%, 800%)
+  }
+  .index-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      font-size: 20px;
+      margin-right: -50%;
+      transform: translate(-50%, 300%)
+  }
+}
+
 @media (min-width: 350px) {
     .count-radius {
         border: solid 2px white;
@@ -10305,7 +10339,7 @@ body.md-skin {
         top: 50%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, 80%)
+        transform: translate(-50%, 90%)
     }
     .button-count{
       position: absolute;
@@ -10316,7 +10350,52 @@ body.md-skin {
         margin-right: -50%;
         transform: translate(-50%, 900%)
     }
+    .index-count{
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        width:90%;
+        color:white;
+        font-size: 20px;
+        margin-right: -50%;
+        transform: translate(-50%, 350%)
+    }
 }
+
+@media (min-width: 500px) {
+  .count-radius {
+      border: solid 2px white;
+      border-radius: 50%;
+      min-width: 200px;
+      min-height: 200px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 160%)
+  }
+  .button-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      margin-right: -50%;
+      transform: translate(-50%, 1200%)
+  }
+  .index-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      font-size: 25px;
+      margin-right: -50%;
+      transform: translate(-50%, 580%)
+  }
+}
+
 @media (min-width: 700px) {
   .count-radius {
       border: solid 2px white;
@@ -10328,7 +10407,7 @@ body.md-skin {
       top: 50%;
       left: 50%;
       margin-right: -50%;
-      transform: translate(-50%, 130%)
+      transform: translate(-50%, 160%)
   }
   .button-count{
     position: absolute;
@@ -10337,7 +10416,51 @@ body.md-skin {
       width:90%;
       color:white;
       margin-right: -50%;
-      transform: translate(-50%, 1100%)
+      transform: translate(-50%, 1200%)
+  }
+  .index-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      font-size: 25px;
+      margin-right: -50%;
+      transform: translate(-50%, 580%)
+  }
+}
+
+@media (min-width: 900px) {
+  .count-radius {
+      border: solid 5px white;
+      border-radius: 50%;
+      min-width: 200px;
+      min-height: 200px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 210%)
+  }
+  .button-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      margin-right: -50%;
+      transform: translate(-50%, 1500%)
+  }
+  .index-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      font-size: 35px;
+      margin-right: -50%;
+      transform: translate(-50%, 550%)
   }
 }
 
@@ -10345,14 +10468,14 @@ body.md-skin {
     .count-radius {
         border: solid 5px white;
         border-radius: 50%;
-        min-width: 250px;
-        min-height: 250px;
+        min-width: 200px;
+        min-height: 200px;
         margin: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, 280%)
+        transform: translate(-50%, 380%)
     }
     .button-count{
       position: absolute;
@@ -10362,6 +10485,16 @@ body.md-skin {
         color:white;
         margin-right: -50%;
         transform: translate(-50%, 2200%)
+    }
+    .index-count{
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        width:90%;
+        color:white;
+        font-size: 35px;
+        margin-right: -50%;
+        transform: translate(-50%, 1150%)
     }
 }
 button#focus:focus

@@ -44,9 +44,9 @@
       return window.localStorage.getItem('rank');
     };
 
-    $scope.permission = function () {
-      alert('ss');
-    };
+    // $scope.permission = function () {
+    //   alert('ss');
+    // };
 
 
   }
