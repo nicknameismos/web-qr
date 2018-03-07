@@ -4792,7 +4792,6 @@ table.table-mail tr td {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
-    max-height: 300px;
 }
 
 .white-bg {
@@ -10306,8 +10305,40 @@ body.md-skin {
         top: 50%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, 130%)
+        transform: translate(-50%, 100%)
     }
+    .button-count{
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        width:90%;
+        color:white;
+        margin-right: -50%;
+        transform: translate(-50%, 1000%)
+    }
+}
+@media (min-width: 700px) {
+  .count-radius {
+      border: solid 2px white;
+      border-radius: 50%;
+      min-width: 200px;
+      min-height: 200px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 130%)
+  }
+  .button-count{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width:90%;
+      color:white;
+      margin-right: -50%;
+      transform: translate(-50%, 1100%)
+  }
 }
 
 @media (min-width: 1000px) {
@@ -10323,9 +10354,18 @@ body.md-skin {
         margin-right: -50%;
         transform: translate(-50%, 280%)
     }
+    .button-count{
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        width:90%;
+        color:white;
+        margin-right: -50%;
+        transform: translate(-50%, 2200%)
+    }
 }
 
-.footer-transparent {
+/* .footer-transparent {
     background: transparent;
     color: white;
-}
+} */
