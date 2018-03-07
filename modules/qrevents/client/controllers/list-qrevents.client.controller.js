@@ -17,7 +17,7 @@
     window.onload = function () {
       window.localStorage.removeItem('isRef');
     };
-    window.onbeforeunload = function () {
+    window.onunload = function () {
       window.localStorage.setItem('isRef', true);
     };
 
@@ -32,7 +32,7 @@
           console.log(response.data.rank);
         });
     }
-    $scope.rank = function(){
+    $scope.rank = function () {
       return window.localStorage.getItem('rank');
     };
 
