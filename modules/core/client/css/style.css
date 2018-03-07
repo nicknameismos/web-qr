@@ -10305,7 +10305,7 @@ body.md-skin {
       top: 50%;
       left: 50%;
       margin-right: -50%;
-      transform: translate(-50%, 90%)
+      transform: translate(-50%, 75%)
   }
   .button-count{
     position: absolute;
@@ -10314,7 +10314,7 @@ body.md-skin {
       width:90%;
       color:white;
       margin-right: -50%;
-      transform: translate(-50%, 900%)
+      transform: translate(-50%, 800%)
   }
   .index-count{
     position: absolute;
@@ -10324,7 +10324,7 @@ body.md-skin {
       color:white;
       font-size: 20px;
       margin-right: -50%;
-      transform: translate(-50%, 350%)
+      transform: translate(-50%, 300%)
   }
 }
 
