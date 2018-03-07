@@ -15,14 +15,20 @@
 
     };
 
-    window.onload = function () {
-      window.localStorage.removeItem('isRef');
-    };
-    window.onunload = function () {
-      window.localStorage.setItem('isRef', true);
-    };
+    // window.onload = function () {
+    //   window.localStorage.removeItem('isRef');
+    //   console.log(document.referrer);
+    // };
 
-    if (window.localStorage.getItem('isRef')) {
+    // window.onunload = function () {
+    //   window.localStorage.setItem('isRef', true);
+    // };
+
+    // window.onbeforeunload = function () {
+    //   window.localStorage.setItem('isRef', true);
+    // };
+
+    if (window.localStorage.getItem('rank')) {
       console.log(false);
     } else {
       console.log(true);
@@ -33,13 +39,15 @@
           console.log(response.data.rank);
         });
     }
+
     $scope.rank = function () {
       return window.localStorage.getItem('rank');
     };
-    $scope.permission = function(){
-     alert('ss');
+
+    $scope.permission = function () {
+      alert('ss');
     };
-   
+
 
   }
 }());
