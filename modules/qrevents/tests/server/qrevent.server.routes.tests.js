@@ -51,11 +51,45 @@ describe('Qrevent CRUD tests', function () {
     // Save a user to the test db and create new Qrevent
     user.save(function () {
       qrevent = {
-        name: 'Qrevent name'
+        rank: 1
       };
 
       done();
     });
+  });
+
+  it('get qr rank', function (done) {
+    agent.get('/api/rank')
+      .end(function (qreventsGetErr, qreventsGetRes) {
+        // Handle Qrevents save error
+        if (qreventsGetErr) {
+          return done(qreventsGetErr);
+        }
+
+        // Get Qrevents list
+        var qrevents = qreventsGetRes.body;
+
+        // Set assertions
+        (qrevents.rank).should.equal(1);
+
+        // Call the assertion callback
+        agent.get('/api/rank')
+          .end(function (qreventsGetErr, qreventsGetRes) {
+            // Handle Qrevents save error
+            if (qreventsGetErr) {
+              return done(qreventsGetErr);
+            }
+
+            // Get Qrevents list
+            var qrevents = qreventsGetRes.body;
+
+            // Set assertions
+            (qrevents.rank).should.equal(2);
+
+            // Call the assertion callback
+            done();
+          });
+      });
   });
 
   it('should be able to save a Qrevent if logged in', function (done) {
@@ -94,7 +128,6 @@ describe('Qrevent CRUD tests', function () {
 
                 // Set assertions
                 (qrevents[0].user._id).should.equal(userId);
-                (qrevents[0].name).should.match('Qrevent name');
 
                 // Call the assertion callback
                 done();
@@ -110,36 +143,6 @@ describe('Qrevent CRUD tests', function () {
       .end(function (qreventSaveErr, qreventSaveRes) {
         // Call the assertion callback
         done(qreventSaveErr);
-      });
-  });
-
-  it('should not be able to save an Qrevent if no name is provided', function (done) {
-    // Invalidate name field
-    qrevent.name = '';
-
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        // Get the userId
-        var userId = user.id;
-
-        // Save a new Qrevent
-        agent.post('/api/qrevents')
-          .send(qrevent)
-          .expect(400)
-          .end(function (qreventSaveErr, qreventSaveRes) {
-            // Set message assertion
-            (qreventSaveRes.body.message).should.match('Please fill Qrevent name');
-
-            // Handle Qrevent save error
-            done(qreventSaveErr);
-          });
       });
   });
 
@@ -167,7 +170,7 @@ describe('Qrevent CRUD tests', function () {
             }
 
             // Update Qrevent name
-            qrevent.name = 'WHY YOU GOTTA BE SO MEAN?';
+            qrevent.rank = 2;
 
             // Update an existing Qrevent
             agent.put('/api/qrevents/' + qreventSaveRes.body._id)
@@ -181,7 +184,7 @@ describe('Qrevent CRUD tests', function () {
 
                 // Set assertions
                 (qreventUpdateRes.body._id).should.equal(qreventSaveRes.body._id);
-                (qreventUpdateRes.body.name).should.match('WHY YOU GOTTA BE SO MEAN?');
+                (qreventUpdateRes.body.rank).should.match(2);
 
                 // Call the assertion callback
                 done();
@@ -218,7 +221,7 @@ describe('Qrevent CRUD tests', function () {
       request(app).get('/api/qrevents/' + qreventObj._id)
         .end(function (req, res) {
           // Set assertion
-          res.body.should.be.instanceof(Object).and.have.property('name', qrevent.name);
+          res.body.should.be.instanceof(Object).and.have.property('rank', qrevent.rank);
 
           // Call the assertion callback
           done();
@@ -363,7 +366,7 @@ describe('Qrevent CRUD tests', function () {
               }
 
               // Set assertions on new Qrevent
-              (qreventSaveRes.body.name).should.equal(qrevent.name);
+              (qreventSaveRes.body.rank).should.equal(qrevent.rank);
               should.exist(qreventSaveRes.body.user);
               should.equal(qreventSaveRes.body.user._id, orphanId);
 
@@ -390,7 +393,7 @@ describe('Qrevent CRUD tests', function () {
 
                         // Set assertions
                         (qreventInfoRes.body._id).should.equal(qreventSaveRes.body._id);
-                        (qreventInfoRes.body.name).should.equal(qrevent.name);
+                        (qreventInfoRes.body.rank).should.equal(qrevent.rank);
                         should.equal(qreventInfoRes.body.user, undefined);
 
                         // Call the assertion callback

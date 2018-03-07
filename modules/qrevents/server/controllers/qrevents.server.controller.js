@@ -12,11 +12,11 @@ var path = require('path'),
 /**
  * Create a Qrevent
  */
-exports.create = function(req, res) {
+exports.create = function (req, res) {
   var qrevent = new Qrevent(req.body);
   qrevent.user = req.user;
 
-  qrevent.save(function(err) {
+  qrevent.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -30,7 +30,7 @@ exports.create = function(req, res) {
 /**
  * Show the current Qrevent
  */
-exports.read = function(req, res) {
+exports.read = function (req, res) {
   // convert mongoose document to JSON
   var qrevent = req.qrevent ? req.qrevent.toJSON() : {};
 
@@ -44,12 +44,12 @@ exports.read = function(req, res) {
 /**
  * Update a Qrevent
  */
-exports.update = function(req, res) {
+exports.update = function (req, res) {
   var qrevent = req.qrevent;
 
   qrevent = _.extend(qrevent, req.body);
 
-  qrevent.save(function(err) {
+  qrevent.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -63,10 +63,10 @@ exports.update = function(req, res) {
 /**
  * Delete an Qrevent
  */
-exports.delete = function(req, res) {
+exports.delete = function (req, res) {
   var qrevent = req.qrevent;
 
-  qrevent.remove(function(err) {
+  qrevent.remove(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -80,8 +80,8 @@ exports.delete = function(req, res) {
 /**
  * List of Qrevents
  */
-exports.list = function(req, res) {
-  Qrevent.find().sort('-created').populate('user', 'displayName').exec(function(err, qrevents) {
+exports.list = function (req, res) {
+  Qrevent.find().sort('-created').populate('user', 'displayName').exec(function (err, qrevents) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -95,7 +95,7 @@ exports.list = function(req, res) {
 /**
  * Qrevent middleware
  */
-exports.qreventByID = function(req, res, next, id) {
+exports.qreventByID = function (req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({
@@ -113,5 +113,28 @@ exports.qreventByID = function(req, res, next, id) {
     }
     req.qrevent = qrevent;
     next();
+  });
+};
+
+exports.rank = function (req, res) {
+  Qrevent.find().sort('-created').populate('user', 'displayName').exec(function (err, qrevents) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      var ranks = new Qrevent({
+        rank: qrevents.length + 1
+      });
+      ranks.save(function (err) {
+        if (err) {
+          return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+          });
+        } else {
+          res.jsonp(ranks);
+        }
+      });
+    }
   });
 };

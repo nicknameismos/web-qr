@@ -10,12 +10,7 @@ var mongoose = require('mongoose'),
  * Qrevent Schema
  */
 var QreventSchema = new Schema({
-  name: {
-    type: String,
-    default: '',
-    required: 'Please fill Qrevent name',
-    trim: true
-  },
+  rank: Number,
   created: {
     type: Date,
     default: Date.now

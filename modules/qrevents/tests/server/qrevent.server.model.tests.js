@@ -30,7 +30,7 @@ describe('Qrevent Model Unit Tests:', function() {
 
     user.save(function() {
       qrevent = new Qrevent({
-        name: 'Qrevent Name',
+        rank: 1,
         user: user
       });
 
@@ -47,14 +47,6 @@ describe('Qrevent Model Unit Tests:', function() {
       });
     });
 
-    it('should be able to show an error when try to save without name', function(done) {
-      qrevent.name = '';
-
-      return qrevent.save(function(err) {
-        should.exist(err);
-        done();
-      });
-    });
   });
 
   afterEach(function(done) {
