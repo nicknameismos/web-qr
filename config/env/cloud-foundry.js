@@ -2,7 +2,7 @@
 
 var cfenv = require('cfenv'),
   appEnv = cfenv.getAppEnv();
-var cfMongoUrl = (function() {
+var cfMongoUrl = (function () {
   if (appEnv.getService('mean-mongo')) {
     var mongoCreds = appEnv.getService('mean-mongo').credentials;
     return mongoCreds.uri || mongoCreds.url;
