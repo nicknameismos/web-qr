@@ -10574,7 +10574,7 @@ button#focus:focus {
     /* height: 100%; */
     overflow-x: hidden;
     background: url('../img/background/BG_web_thamtu.jpg');
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background-size: 100%;
 }
