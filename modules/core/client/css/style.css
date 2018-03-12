@@ -10550,7 +10550,7 @@ button#focus:focus {
 }
 
 
-html, body {margin: 0; height: 80%; }
+html, body {margin: 0; height: 150%; overflow: hidden}
 
 
 /* .footer-transparent {
