@@ -10571,6 +10571,7 @@ button#focus:focus {
 }
 #wrapper {
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     background: url('../img/background/BG_web_thamtu.jpg');
     background-repeat: no-repeat;
