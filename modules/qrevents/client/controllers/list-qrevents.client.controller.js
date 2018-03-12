@@ -9,7 +9,7 @@
 
   function QreventsListController($http, $scope) {
     var vm = this;
-    $scope.rrr = 'modules/qrevents/client/img/background/BG_web_thamtu.jpg';
+    $scope.dataImage = 'modules/core/client/img/background/logo.png';
     // vm.qrevents = QreventsService.query();
     $scope.initData = function () {
 
