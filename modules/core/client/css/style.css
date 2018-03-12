@@ -519,7 +519,7 @@ body.canvas-menu .nav-header {
 }
 
 body.mini-navbar #page-wrapper {
-    margin: 0 0 0 70px;
+    /* margin: 0 0 0 70px; */
 }
 
 body.fixed-sidebar.mini-navbar .footer,
@@ -549,7 +549,7 @@ body.fixed-sidebar.mini-navbar #page-wrapper {
 }
 
 body.body-small.fixed-sidebar.mini-navbar #page-wrapper {
-    margin: 0 0 0 220px;
+    /* margin: 0 0 0 220px; */
 }
 
 body.body-small.fixed-sidebar.mini-navbar .navbar-static-side {
@@ -4303,8 +4303,8 @@ video {
 
 #page-wrapper {
     padding: 0 15px;
-    min-height: 568px;
-    position: relative !important;
+    /* min-height: 568px;
+    position: relative !important; */
 }
 
 
@@ -8899,7 +8899,7 @@ body.rtls {
 }
 
 body.rtls #page-wrapper {
-    margin: 0 220px 0 0;
+    /* margin: 0 220px 0 0; */
 }
 
 body.rtls .nav-second-level li a {
@@ -9093,7 +9093,7 @@ body.rtls.mini-navbar.fixed-sidebar #page-wrapper {
 }
 
 body.rtls.body-small.fixed-sidebar.mini-navbar #page-wrapper {
-    margin: 0 220px 0 0;
+    /* margin: 0 220px 0 0; */
 }
 
 body.rtls.body-small.fixed-sidebar.mini-navbar .navbar-static-side {
@@ -9130,7 +9130,7 @@ body.rtls.top-navigation .footer.fixed {
     .body-small.rtls #page-wrapper {
         position: inherit;
         margin: 0 0 0 0;
-        min-height: 1000px;
+        /* min-height: 1000px; */
     }
     .body-small.rtls .navbar-static-side {
         display: none;
@@ -10169,7 +10169,7 @@ body.md-skin {
     #page-wrapper {
         position: inherit;
         margin: 0 0 0 0;
-        min-height: 1000px;
+        /* min-height: 1000px; */
     }
     .body-small .navbar-static-side {
         display: none;
@@ -10218,11 +10218,11 @@ body.md-skin {
         display: none;
     }
     body:not(.mini-navbar) {
-        -webkit-transition: background-color 500ms linear;
+        /* -webkit-transition: background-color 500ms linear;
         -moz-transition: background-color 500ms linear;
         -o-transition: background-color 500ms linear;
         -ms-transition: background-color 500ms linear;
-        transition: background-color 500ms linear;
+        transition: background-color 500ms linear; */
         background-color: #234F8E;
         /* background: url('../img/background/BG_web_thamtu.jpg');
         background-repeat: no-repeat;
