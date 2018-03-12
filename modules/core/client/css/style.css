@@ -4784,15 +4784,12 @@ table.table-mail tr td {
 
 .gray-bg,
 .bg-muted {
-    /* background-color: #f3f3f4; */
-    /* background-image: url('../img/background/BG_web_thamtu.jpg');
-  background-size: cover; */
-    background: url('../img/background/BG_web_thamtu.jpg');
     /* background-position: center center; */
+    /* background-size: 100%; */
+    /* background: url('../img/background/BG_web_thamtu.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-size: 100%; */
-    background-size: cover;
+    background-size: cover; */
 }
 
 .white-bg {
@@ -10227,10 +10224,10 @@ body.md-skin {
         -ms-transition: background-color 500ms linear;
         transition: background-color 500ms linear;
         background-color: #f3f3f4;
-        background: url('../img/background/BG_web_thamtu.jpg');
+        /* background: url('../img/background/BG_web_thamtu.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
+        background-size: cover; */
     }
 }
 
@@ -10291,44 +10288,58 @@ body.md-skin {
 .count-text {
     color: white;
     font-size: 50px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    
+    position: relative;
+/* float: left; */
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    /* margin: 0; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, -50%) */
 }
+
 .count-radius {
     border: solid 2px white;
-    border-radius: 50%;
-    min-width: 200px;
-    min-height: 200px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 30%)
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
+    /* min-width: 200px; */
+    /* min-height: 200px; */
+    /* margin: 0; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, 30%) */
 }
-.button-count{
-    position: absolute;
-      top: 50%;
-      left: 50%;
-      width:90%;
-      color:white;
-      margin-right: -50%;
-      transform: translate(-50%, 600%)
-  }
-  .index-count{
-    position: absolute;
-      top: 50%;
-      left: 50%;
-      width:90%;
-      color:white;
-      font-size: 20px;
-      margin-right: -50%;
-      transform: translate(-50%, 50%)
-  }
+
+.button-count {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    width: 90%;
+    color: white;
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, 600%) */
+}
+
+.index-count {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* width: 90%; */
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, 50%) */
+}
+
+
 /* @media (min-width: 200px) {
   .count-radius {
       border: solid 2px white;
@@ -10532,16 +10543,46 @@ body.md-skin {
         transform: translate(-50%, 1150%)
     }
 } */
-button#focus:focus
-{
-    background:transparent;
-    color:white;
+
+button#focus:focus {
+    background: transparent;
+    color: white;
 }
+
+
 /* html, body {margin: 0; height: 100%; overflow: hidden} */
+
+
 /* .footer-transparent {
     background: transparent;
     color: white;
 } */
-.dataImage{
+
+.dataImage {
     width: 100%;
+}
+
+.bgSection {
+    background: url('../img/background/BG_web_thamtu.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: 10%; */
+}
+/* #wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    background: url('../img/background/BG_web_thamtu.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background: url('../img/background/BG_web_thamtu.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
