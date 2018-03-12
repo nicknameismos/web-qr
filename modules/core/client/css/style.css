@@ -10570,13 +10570,13 @@ button#focus:focus {
     /* height: 10%; */
 }
 #wrapper {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     overflow-x: hidden;
     background: url('../img/background/BG_web_thamtu.jpg');
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
 }
 /* body {
     height: 100%;
