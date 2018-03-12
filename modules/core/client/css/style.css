@@ -10569,16 +10569,7 @@ button#focus:focus {
     background-size: cover;
     /* height: 10%; */
 }
-#wrapper {
-    width: 100%;
-    overflow-x: hidden;
-    background: url('../img/background/BG_web_thamtu.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-/* body {
-    height: 100%;
+/* #wrapper {
     width: 100%;
     overflow-x: hidden;
     background: url('../img/background/BG_web_thamtu.jpg');
@@ -10586,3 +10577,12 @@ button#focus:focus {
     background-attachment: fixed;
     background-size: cover;
 } */
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background: url('../img/background/BG_web_thamtu.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
