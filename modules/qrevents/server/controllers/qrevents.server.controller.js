@@ -150,7 +150,7 @@ exports.reports = function (req, res) {
     } else {
       var alldate = [];
       qrevents.forEach(function (qr) {
-        var str = qr.created;
+        var str = qr.created.toString();
         var res = str.substr(0, 10);
         if (alldate.indexOf(res) === -1) {
           alldate.push(res);
