@@ -20,6 +20,8 @@ module.exports = function (app) {
   app.route('/api/rank')//.all(qreventsPolicy.isAllowed)
     .get(qrevents.rank);
 
+  app.route('/api/reports')//.all(qreventsPolicy.isAllowed)
+    .get(qrevents.reports);
   // Finish by binding the Qrevent middleware
   app.param('qreventId', qrevents.qreventByID);
 };

@@ -139,3 +139,33 @@ exports.rank = function (req, res) {
     }
   });
 };
+
+
+exports.reports = function (req, res) {
+  Qrevent.find().sort('-created').populate('user', 'displayName').exec(function (err, qrevents) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      var alldate = [];
+      qrevents.forEach(function (qr) {
+        var str = qr.created;
+        var res = str.substr(0, 10);
+        if (alldate.indexOf(res) === -1) {
+          alldate.push(res);
+        }
+      });
+      var resultdata = [];
+      alldate.forEach(function (date) {
+        var qrsByDate = qrevents.filter(function (obj) { return obj.created.substr(0, 10).toString() === date.toString() });
+        resultdata.push({
+          date: date,
+          userscount: qrsByDate.length,
+          users: qrsByDate
+        });
+      });
+      res.jsonp(resultdata);
+    }
+  });
+};
