@@ -158,7 +158,7 @@ exports.reports = function (req, res) {
       });
       var resultdata = [];
       alldate.forEach(function (date) {
-        var qrsByDate = qrevents.filter(function (obj) { return obj.created.substr(0, 10).toString() === date.toString() });
+        var qrsByDate = qrevents.filter(function (obj) { return obj.created.toString().substr(0, 10) === date.toString() });
         resultdata.push({
           date: date,
           userscount: qrsByDate.length,
